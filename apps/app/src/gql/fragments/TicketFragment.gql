@@ -1,0 +1,8 @@
+fragment TicketFragment on Ticket {
+
+    id
+    title
+    content
+    createdAt
+    updatedAt
+}

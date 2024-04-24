@@ -1,5 +1,5 @@
 // Plugins
-import { bootstrap } from "@/bootstraps";
+import { bootstrap } from "@/ts/bootstraps";
 
 // Components
 import App from "./App.vue";

@@ -1,0 +1,9 @@
+#import "../../fragments/TicketFragment.gql"
+
+mutation CreateTicket($input: CreateTicketInput!) {
+
+    createTicket(input: $input) {
+
+        ...TicketFragment
+    }
+}

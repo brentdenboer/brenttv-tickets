@@ -5,7 +5,7 @@ import { createApolloProvider } from "@vue/apollo-option";
 import type { App } from "vue";
 
 
-export function apolloBootstrap(app: App) {
+export function apolloBootstrap(app: App): ApolloClient<any> {
 
     // HTTP connection to the API
     const httpLink = createHttpLink({
@@ -29,4 +29,6 @@ export function apolloBootstrap(app: App) {
     });
 
     app.use(apolloProvider);
+
+    return apolloClient;
 }

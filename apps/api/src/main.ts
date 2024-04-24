@@ -16,7 +16,9 @@ async function bootstrap() {
         new FastifyAdapter()
     );
 
+    app.enableCors();
     await app.register(helmet);
+
     app.useGlobalPipes(new ValidationPipe());
 
     await app.listen(3000, "0.0.0.0");
