@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  database:
+    image: 'bitnami/mariadb:latest'
+    ports:
+      - '3306:3306'
+    environment:
+      - MARIADB_ROOT_USER=root
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=brenttv_tickets
+      - MARIADB_CHARACTER_SET=utf8mb4
+      - MARIADB_COLLATE=utf8mb4_unicode_ci
+    networks:
+      - default
+    volumes:
+      - ./.docker/mariadb:/bitnami/mariadb
+
+networks:
+  default:
+    driver: bridge
