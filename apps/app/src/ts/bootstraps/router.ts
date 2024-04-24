@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import type { App } from "vue";
 
 // Views
-import TicketView from "@/ts/views/Ticket.vue";
+import TicketView from "@/ts/views/TicketView.vue";
 
 
 export function routerBootstrap(app: App) {
@@ -17,7 +17,7 @@ export function routerBootstrap(app: App) {
                 },
                 {
                     path: "/admin",
-                    component: () => import("@/ts/views/Admin.vue")
+                    component: () => import("@/ts/views/AdminView.vue")
                 }
             ]
         })

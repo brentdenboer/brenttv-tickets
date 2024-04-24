@@ -5,7 +5,10 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "./src/ts/@types"
+    ]
   },
   "include": ["vite.config.mts"]
 }

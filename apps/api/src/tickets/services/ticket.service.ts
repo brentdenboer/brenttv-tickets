@@ -23,12 +23,13 @@ export class TicketService {
         return await this.ticketRepository.findAll();
     }
 
-    async createTicket({ title, content }: CreateTicketDto): Promise<Ticket> {
+    async createTicket({ title, content, createdBy }: CreateTicketDto): Promise<Ticket> {
 
         // Create a new ticket.
         const ticket = new Ticket();
         ticket.title = title;
         ticket.content = content;
+        ticket.createdBy = createdBy;
 
         // Save the created ticket to the database.
         await this.ticketRepository

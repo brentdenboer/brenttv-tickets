@@ -1,5 +1,6 @@
 import { Field, ObjectType } from "@nestjs/graphql";
 import { GraphQLDateTime, GraphQLNonEmptyString, GraphQLUUID } from "graphql-scalars";
+import { GraphQLString } from "graphql/type";
 
 
 @ObjectType()
@@ -11,12 +12,15 @@ export class Ticket {
     @Field(_ => GraphQLNonEmptyString)
     title: string;
 
+    @Field(_ => GraphQLString, { nullable: true })
+    content?: string;
+
     @Field(_ => GraphQLNonEmptyString)
-    content: string;
+    createdBy: string;
 
     @Field(_ => GraphQLDateTime)
     createdAt: Date;
 
     @Field(_ => GraphQLDateTime, { nullable: true })
-    updatedAt?: Date|null;
+    updatedAt?: Date;
 }

@@ -11,5 +11,5 @@ export class BaseEntity extends MikroORMBaseEntity {
     createdAt: Date;
 
     @Property({ nullable: true, onUpdate: () => new Date() })
-    updatedAt?: Date|null;
+    updatedAt?: Date;
 }

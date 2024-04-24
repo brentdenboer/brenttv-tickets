@@ -5,10 +5,11 @@
 </template>
 
 <script lang="ts">
-import {Vue, Component} from 'vue-facing-decorator';
+import { Component, Vue } from "vue-facing-decorator";
+
 
 @Component({})
-export default class Admin extends Vue {
+export default class AdminView extends Vue {
 
 }
 </script>

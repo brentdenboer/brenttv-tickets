@@ -27,7 +27,7 @@ import type { TicketService } from "@/ts/services/ticket.service";
 
 
 @Component({})
-export default class Ticket extends Vue {
+export default class TicketView extends Vue {
 
   input: { title: string, content: string } = {
     title: "",
