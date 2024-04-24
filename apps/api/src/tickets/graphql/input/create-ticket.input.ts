@@ -1,7 +1,6 @@
 import { Field, InputType } from "@nestjs/graphql";
 import { GraphQLNonEmptyString } from "graphql-scalars";
 import { MaxLength, MinLength } from "class-validator";
-import { GraphQLString } from "graphql/type";
 
 
 @InputType()
@@ -12,7 +11,8 @@ export class CreateTicketInput {
     @MaxLength(255)
     title: string;
 
-    @Field(_ => GraphQLString, { nullable: true, defaultValue: null })
+    @Field(_ => GraphQLNonEmptyString, { nullable: true, defaultValue: null })
+    @MinLength(1)
     @MaxLength(2048)
     content?: string;
 

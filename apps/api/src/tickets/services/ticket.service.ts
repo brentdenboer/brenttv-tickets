@@ -23,6 +23,11 @@ export class TicketService {
         return await this.ticketRepository.findAll();
     }
 
+    async getTotalTickets(): Promise<number> {
+
+        return await this.ticketRepository.count();
+    }
+
     async createTicket({ title, content, createdBy }: CreateTicketDto): Promise<Ticket> {
 
         // Create a new ticket.

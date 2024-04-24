@@ -8,6 +8,8 @@ export class CreateTicketDto {
     @MaxLength(255)
     title: string;
 
+    @IsNotEmpty()
+    @MinLength(1)
     @MaxLength(2048)
     content?: string;
 
