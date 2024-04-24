@@ -3,7 +3,7 @@
   <div class="content pa-5 ma-auto w-100 h-100 d-flex justify-center align-center flex-column">
     <h1 class="text-md-h2 mb-12 text-sm-h3">BrentTV ticket</h1>
     <v-form class="w-100 d-flex flex-column" @submit.prevent="createTicket">
-      <v-text-field label="Naam" class="mb-2"/>
+      <v-text-field label="Naam" class="mb-2" v-model="input.createdBy"/>
       <v-text-field label="Titel probleem" v-model="input.title"/>
       <v-textarea auto-grow label="Omschrijving probleem" v-model="input.content"/>
       <p class="text-subtitle-1 text-center align-self-center mb-2">Hoe hard ga je huilen als ik het niet op
@@ -29,9 +29,10 @@ import type { TicketService } from "@/ts/services/ticket.service";
 @Component({})
 export default class TicketView extends Vue {
 
-  input: { title: string, content: string } = {
+  input: { title: string, content: string, createdBy: string } = {
     title: "",
-    content: ""
+    content: "",
+    createdBy: ""
   }
 
   @Inject()
