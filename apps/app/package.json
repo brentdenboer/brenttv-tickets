@@ -10,7 +10,7 @@
     "url": "https://www.brentify.nl/"
   },
   "scripts": {
-    "dev": "vite",
+    "start:dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },

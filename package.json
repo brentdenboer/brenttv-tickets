@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev"
+    "start:dev": "turbo start:dev"
   },
   "devDependencies": {
     "turbo": "latest"
