@@ -1,0 +1,36 @@
+{
+  "name": "@brenttv/tickets-app",
+  "version": "1.0.0",
+  "description": "BrentTV Ticketing APP",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Brentify",
+    "email": "info@brentify.nl",
+    "url": "https://www.brentify.nl/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "roboto-fontface": "^0.10.0",
+    "vue": "^3.4.25",
+    "vuetify": "^3.5.17",
+    "vue-facing-decorator": "^2.1.20"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.0",
+    "@types/node": "^20.12.7",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.75.0",
+    "typescript": "^5.4.5",
+    "unplugin-fonts": "^1.1.1",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.2.10",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue-tsc": "^2.0.14"
+  }
+}
