@@ -3,6 +3,7 @@ fragment TicketFragment on Ticket {
     id
     title
     content
+    createdBy
     createdAt
     updatedAt
 }

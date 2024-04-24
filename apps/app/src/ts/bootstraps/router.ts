@@ -13,10 +13,12 @@ export function routerBootstrap(app: App) {
             routes: [
                 {
                     path: "/",
+                    name: 'index',
                     component: TicketView
                 },
                 {
                     path: "/admin",
+                    name: 'admin',
                     component: () => import("@/ts/views/AdminView.vue")
                 }
             ]

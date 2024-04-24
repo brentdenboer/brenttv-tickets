@@ -2,8 +2,8 @@
   <v-app>
     <v-main>
       <router-view v-slot="{ route, Component }">
-        <v-fade-transition :key="route.fullPath">
-          <component :is="Component"></component>
+        <v-fade-transition :duration="150" mode="out-in">
+          <component :is="Component" :key="route.fullPath"></component>
         </v-fade-transition>
       </router-view>
     </v-main>
@@ -20,10 +20,22 @@ import {Component, Vue} from "vue-facing-decorator";
 export default class App extends Vue {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-.content {
-  max-width: 900px;
+* {
+  user-select: none;
+}
+
+.view {
+  width: 100vvw;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: hidden;
 }
 
 </style>

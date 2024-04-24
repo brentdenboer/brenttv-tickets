@@ -1,0 +1,9 @@
+#import "../../fragments/TicketFragment.gql"
+
+query AllTicketsQuery {
+
+    allTickets {
+
+        ...TicketFragment
+    }
+}

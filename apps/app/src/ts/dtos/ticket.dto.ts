@@ -3,8 +3,9 @@ export class Ticket {
     id!: string;
 
     title!: string;
-    content!: string;
+    content?: string;
+    createdBy!: string;
 
-    createdAt!: Date;
-    updatedAt?: Date|null;
+    createdAt!: string;
+    updatedAt?: string;
 }

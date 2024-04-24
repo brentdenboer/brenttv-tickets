@@ -11,7 +11,7 @@ export class TicketService {
 
     constructor(protected apolloClient: ApolloClient<any>) {}
 
-    async create(input: { title: string, content: string }): Promise<Ticket|null> {
+    async create(input: { title: string, content: string, createdBy?: string }): Promise<Ticket|null> {
 
         try {
 
