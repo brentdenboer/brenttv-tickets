@@ -14,6 +14,7 @@
         <v-btn>Niet</v-btn>
       </v-btn-toggle>
       <v-btn type="submit" class="mt-12" color="primary" :loading="creatingTicket" :disabled="shouldDisable">Verstuur</v-btn>
+      <span class="text-subtitle-2 text-grey text-center mt-3">&copy; 2024 - Brent den Boer</span>
     </v-form>
     <v-overlay persistent location="center center" v-model="showSentEmoji">
       <div style="width: 100vw; height: 100vh" class="d-flex justify-center align-center flex-column">
