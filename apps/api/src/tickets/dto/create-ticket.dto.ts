@@ -1,4 +1,4 @@
-import { IsNotEmpty, MaxLength, MinLength } from "class-validator";
+import { IsNotEmpty, IsOptional, MaxLength, MinLength } from "class-validator";
 
 
 export class CreateTicketDto {
@@ -8,6 +8,7 @@ export class CreateTicketDto {
     @MaxLength(255)
     title: string;
 
+    @IsOptional()
     @IsNotEmpty()
     @MinLength(1)
     @MaxLength(2048)
