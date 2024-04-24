@@ -3,6 +3,7 @@ import Components from "unplugin-vue-components/vite";
 import Vue from "@vitejs/plugin-vue";
 import Vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 import ViteFonts from "unplugin-fonts/vite";
+import GraphQL from "vite-plugin-graphql-loader";
 
 // Utilities
 import { defineConfig } from "vite";
@@ -26,7 +27,8 @@ export default defineConfig({
                     }
                 ]
             }
-        })
+        }),
+        GraphQL()
     ],
     define: { "process.env": {} },
     resolve: {

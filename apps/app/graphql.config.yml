@@ -1,0 +1,8 @@
+schema: ./schema.graphql
+extensions:
+  endpoints:
+    "BrentTV Tickets - GraphQL Endpoint":
+      url: /api
+      headers:
+        user-agent: JS GraphQL
+      introspect: false

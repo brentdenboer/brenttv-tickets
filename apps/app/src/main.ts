@@ -1,5 +1,5 @@
 // Plugins
-import { registerPlugins } from "@/plugins";
+import { bootstrap } from "@/bootstraps";
 
 // Components
 import App from "./App.vue";
@@ -9,5 +9,6 @@ import { createApp } from "vue";
 
 // Create the Application
 const app = createApp(App);
-registerPlugins(app);
+bootstrap(app);
+
 app.mount("#app");
