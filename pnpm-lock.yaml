@@ -123,6 +123,9 @@ importers:
       vue-facing-decorator:
         specifier: ^2.1.20
         version: 2.1.20(vue@3.4.25)
+      vue-router:
+        specifier: ^4.3.2
+        version: 4.3.2(vue@3.4.25)
       vuetify:
         specifier: ^3.5.17
         version: 3.5.17(typescript@5.4.5)(vite-plugin-vuetify@2.0.3)(vue@3.4.25)
@@ -1372,6 +1375,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.4.25
       '@vue/shared': 3.4.25
+
+  /@vue/devtools-api@6.6.1:
+    resolution: {integrity: sha512-LgPscpE3Vs0x96PzSSB4IGVSZXZBZHpfxs+ZA1d+VEPwHdOXowy/Y2CsvCAIFrf+ssVU1pD1jidj505EpUnfbA==}
+    dev: false
 
   /@vue/language-core@2.0.14(typescript@5.4.5):
     resolution: {integrity: sha512-3q8mHSNcGTR7sfp2X6jZdcb4yt8AjBXAfKk0qkZIh7GAJxOnoZ10h5HToZglw4ToFvAnq+xu/Z2FFbglh9Icag==}
@@ -4338,6 +4345,15 @@ packages:
     peerDependencies:
       vue: ^3.0.0
     dependencies:
+      vue: 3.4.25(typescript@5.4.5)
+    dev: false
+
+  /vue-router@4.3.2(vue@3.4.25):
+    resolution: {integrity: sha512-hKQJ1vDAZ5LVkKEnHhmm1f9pMiWIBNGF5AwU67PdH7TyXCj/a4hTccuUuYCAMgJK6rO/NVYtQIEN3yL8CECa7Q==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.6.1
       vue: 3.4.25(typescript@5.4.5)
     dev: false
 

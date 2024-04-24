@@ -1,20 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
+import type { App } from "vue";
+
+// Views
+import TicketView from "@/views/Ticket.vue";
 
 
-const routes = [
-    {
-        path: "/",
-        component: () => import("../views/Ticket.vue")
-    },
-    {
-        path: "/admin",
-        component: () => import("../views/Admin.vue")
-    }
-];
+export function routerBootstrap(app: App) {
 
-const router = createRouter({
-    history: createWebHistory(),
-    routes
-});
-
-export default router;
+    app.use(
+        createRouter({
+            history: createWebHistory(),
+            routes: [
+                {
+                    path: "/",
+                    component: TicketView
+                },
+                {
+                    path: "/admin",
+                    component: () => import("@/views/Admin.vue")
+                }
+            ]
+        })
+    );
+}
