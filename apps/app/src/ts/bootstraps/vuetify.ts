@@ -16,7 +16,14 @@ export function vuetifyBootstrap(app: App) {
         createVuetify({
             theme: {
 
-                defaultTheme: "dark"
+                defaultTheme: "dark",
+                themes: {
+                    dark: {
+                        colors: {
+                            primary: "#4CAF50"
+                        }
+                    }
+                }
             }
         })
     );

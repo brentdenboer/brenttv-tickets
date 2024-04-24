@@ -11,14 +11,23 @@ export class TicketService {
 
     constructor(protected apolloClient: ApolloClient<any>) {}
 
-    async create(input: { title: string, content: string }): Promise<Ticket> {
+    async create(input: { title: string, content: string }): Promise<Ticket|null> {
 
-        const { data } = await this.apolloClient.mutate({
+        try {
 
-            mutation: CreateTicketMutation,
-            variables: { input }
-        });
+            const { data } = await this.apolloClient.mutate({
 
-        return data.createTicket as Ticket;
+                mutation: CreateTicketMutation,
+                variables: { input }
+            });
+
+            return data.createTicket as Ticket;
+        }
+        catch (e) {
+
+            console.error(e);
+        }
+
+        return null;
     }
 }
