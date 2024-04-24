@@ -1,0 +1,14 @@
+{
+  "name": "@brenttv/tickets",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
