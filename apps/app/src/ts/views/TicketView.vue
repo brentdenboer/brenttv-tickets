@@ -5,7 +5,8 @@
       <v-form class="w-100 d-flex flex-column" @submit.prevent="createTicket">
         <v-text-field label="Hoe heet je?" class="mb-2" v-model="input.createdBy"/>
         <v-text-field label="Wat is er?" v-model="input.title"/>
-        <v-textarea auto-grow label="En wat bedoel je daar precies mee?" v-model="input.content"/>
+        <v-textarea auto-grow label="En wat bedoel je daar precies mee?" rows="10" v-model="input.content"/>
+        <v-file-input label="Heb je er ook nog bewijs van, of hoe zit da?"></v-file-input>
         <p class="text-subtitle-1 text-center align-self-center mb-2">Hoe hard ga je huilen als ik het niet op
           los?</p>
         <v-btn-toggle class="justify-center">
